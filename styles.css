@@ -147,10 +147,6 @@ button:active {
   animation: catDrifting 8s ease-in-out infinite;
 }
 
-/* Hearts (disabled) */
-.heart {
-  display: none;
-}
 
 @keyframes float {
   0% { transform: translateY(0); }
