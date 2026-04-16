@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Injila Di</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<img src="cat.png" class="cat" id="catImg">
+
+<!-- Page 1 -->
+<div class="page active" id="p1">
+  <div class="page-box">
+    <h2>Hii Injila Di 🥺💖</h2>
+    <button onclick="next(2)">Next</button>
+  </div>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="p2">
+  <div class="page-box">
+    <h2>Are you mad at me? 🥺</h2>
+    <div class="button-group">
+      <button onclick="next(4)">Yes</button>
+      <button onclick="next(3)">No</button>
+    </div>
+  </div>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="p3">
+  <div class="page-box">
+    <h2>I know you are,<br>but please listen to me once 🥺</h2>
+    <button onclick="next(4)">Next</button>
+  </div>
+</div>
+
+<!-- Page 4 POPUP -->
+<div class="page" id="p4">
+  <div class="window">
+    <div class="header">
+      <span>Message</span>
+    </div>
+    <div class="content">
+      I'm really sorry 😔
+      <br>
+      I completely forgot your birthday 🎂
+      <br>
+      That was really careless of me
+      <br>
+      You're someone special to me
+      <br>
+      And you deserve to be remembered
+      <br>
+      I feel awful about this
+      <br>
+      Please forgive me 💖
+      <br><br>
+      <button onclick="next(5)">ok</button>
+    </div>
+  </div>
+</div>
+
+<!-- Page 5 -->
+<div class="page" id="p5">
+  <div class="page-box">
+    <h2>So do you forgive me? 🥺</h2>
+    <div class="button-group">
+      <button onclick="next(6)">Yes</button>
+      <button id="no">No</button>
+    </div>
+  </div>
+</div>
+
+<!-- Page 6 -->
+<div class="page" id="p6">
+  <div class="page-box">
+    <h2>
+    YAYYY 😭💖 <br><br>
+    Thank you sooo much Injila Di!! <br><br>
+    I'm really really sorry once again <br><br>
+    I truly didn't mean to make you upset
+    </h2>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
