@@ -149,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 for(let i=0;i<25;i++){
   let heart = document.createElement("div");
   heart.className = "heart";
+   heart.innerText = "♥";
 
   heart.style.left = Math.random() * 100 + "vw";
   heart.style.animationDuration = (5 + Math.random() * 5) + "s";
