@@ -145,4 +145,17 @@ function triggerHearts() {
  */
 document.addEventListener('DOMContentLoaded', () => {
   updateCatBehavior(1);
+   
+for(let i=0;i<25;i++){
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+  heart.style.fontSize = (16 + Math.random() * 20) + "px";
+
+  document.body.appendChild(heart);
+}
+
 });
