@@ -314,7 +314,8 @@ h2::after, h2::before, .content::after, .content::before {
 .heart {
   position: absolute;
   bottom: -60px;
-  color: rgba(255,255,255,0.7); /* SAME as bubble */
+  color: #ffffff;
+   filter: drop-shadow(0 0 12px rgba(255,255,255,1)); /* SAME as bubble */
   animation: floatUp linear infinite;
   opacity: 0.8;
   pointer-events: none;
