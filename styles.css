@@ -84,39 +84,27 @@ button:active {
   pointer-events: none;
 }
 
-/* PAGE 1-2: Curious entrance */
-.cat-entering {
+/* Cat Animation */
+.cat-entering,
+.cat-thinking,
+.cat-listening,
+.cat-reactive,
+.cat-celebrating,
+.cat-idea,
+.cat-timetravel,
+.cat-arrived {
   animation: catDrifting 8s ease-in-out infinite;
 }
 
 @keyframes catDrifting {
-  0% { bottom: 75%; left: 5%; right: auto; }
-  12% { bottom: 70%; left: 15%; right: auto; }
-  25% { bottom: 50%; left: 85%; right: auto; }
-  37% { bottom: 30%; left: 80%; right: auto; }
-  50% { bottom: 10%; left: 50%; right: auto; }
-  62% { bottom: 25%; left: 15%; right: auto; }
-  75% { bottom: 60%; left: 5%; right: auto; }
-  87% { bottom: 75%; left: 40%; right: auto; }
-  100% { bottom: 75%; left: 5%; right: auto; }
+  0% { bottom: 75%; left: 5%; }
+  25% { bottom: 50%; left: 85%; }
+  50% { bottom: 10%; left: 50%; }
+  75% { bottom: 60%; left: 5%; }
+  100% { bottom: 75%; left: 5%; }
 }
 
-/* PAGE 3: Thinking/nodding */
-.cat-thinking {
-  animation: catDrifting 8s ease-in-out infinite;
-}
-
-/* PAGE 4: Calm and still */
-.cat-listening {
-  animation: catDrifting 8s ease-in-out infinite;
-}
-
-/* PAGE 5: Reactive mode (nudging) */
-.cat-reactive {
-  animation: catDrifting 8s ease-in-out infinite;
-}
-
-/* PAGE 5: Cat nudging reaction */
+/* Cat nudge */
 .cat-nudge {
   animation: catNudge 0.3s ease-in-out;
 }
@@ -127,37 +115,28 @@ button:active {
   100% { transform: translateX(0); }
 }
 
-/* PAGE 6: Happy celebration */
-.cat-celebrating {
-  animation: catDrifting 8s ease-in-out infinite !important;
-}
-
-/* PAGE 7: Thinking about fix */
-.cat-idea {
-  animation: catDrifting 8s ease-in-out infinite !important;
-}
-
-/* PAGES 8-9: Time travel effect */
-.cat-timetravel {
-  animation: catDrifting 8s ease-in-out infinite !important;
-}
-
-/* PAGE 10: Time travel complete */
-.cat-arrived {
-  animation: catDrifting 8s ease-in-out infinite;
-}
-
-/* Hearts (disabled) */
+/* 💖 FLOATING HEARTS */
 .heart {
-  display: none;
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 4s linear forwards;
+  pointer-events: none;
+  z-index: 1;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100vh); }
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.4);
+    opacity: 0;
+  }
 }
 
-/* Modern Dialog Box Design */
+/* Dialog Box */
 .window {
   width: 520px;
   background: #f0d9ea;
@@ -168,7 +147,6 @@ button:active {
               15px 15px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   animation: popIn 0.3s ease-out;
-  position: relative;
 }
 
 @keyframes popIn {
@@ -179,14 +157,7 @@ button:active {
 .header {
   background: #f5f5f0;
   padding: 12px 18px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
   border-bottom: 3px solid #333;
-}
-
-.close {
-  display: none;
 }
 
 .content {
@@ -194,118 +165,35 @@ button:active {
   color: #333;
   line-height: 2;
   font-size: 18px;
-  font-family: 'Press Start 2P', 'Courier New', monospace;
-  letter-spacing: 1px;
   text-align: center;
-}
-
-.content button {
-  margin-top: 14px;
-  padding: 12px 36px;
-  border: 3px solid #333;
-  background: #f5f5f0;
-  color: #333;
-  font-family: 'Press Start 2P', 'Courier New', monospace;
-  font-weight: bold;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: inset 1px 1px 0 0 #ffffff, inset -1px -1px 0 0 #666;
-  transition: all 0.05s ease;
-}
-
-.content button:hover {
-  background: #e8e8e0;
-  transform: scale(1.05);
-}
-
-.content button:active {
-  box-shadow: inset -1px -1px 0 0 #ffffff, inset 1px 1px 0 0 #000;
 }
 
 /* Page Box */
 .page-box {
   border: 4px solid #333;
   background: #f0d9ea;
-  padding: 0;
   display: inline-block;
-  box-shadow: 8px 8px 0 0 rgba(220, 160, 200, 0.6),
-              12px 12px 0 0 rgba(200, 140, 180, 0.4),
-              15px 15px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 8px 8px 0 0 rgba(220, 160, 200, 0.6);
   border-radius: 24px;
   overflow: hidden;
-  animation: popIn 0.3s ease-out;
-  position: relative;
   min-width: 500px;
-}
-
-.page-box::before {
-  content: '';
-  display: block;
-  background: #f5f5f0;
-  padding: 14px 18px;
-  border-bottom: 3px solid #333;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  height: 40px;
-}
-
-.page-box::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 18px;
-  width: 14px;
-  height: 14px;
-  background: #e599c1;
-  border-radius: 50%;
-  box-shadow: 24px 0 0 #e599c1, 48px 0 0 #e599c1;
 }
 
 .page-box h2 {
   color: #333;
   font-size: 18px;
-  margin: 0;
   padding: 28px 32px;
-  font-weight: bold;
-  letter-spacing: 1px;
   line-height: 1.8;
-  font-family: 'Press Start 2P', 'Courier New', monospace;
-}
-
-.page-box .button-group {
-  padding: 0 32px 28px 32px;
 }
 
 /* Headings */
 h2 {
   color: black;
   font-size: 18px;
-  margin: 0 0 15px 0;
-  font-weight: bold;
-  letter-spacing: 1px;
-  line-height: 1.8;
-  font-family: 'Press Start 2P', 'Courier New', monospace;
-}
-
-/* Emoji Styling */
-h2 {
-  font-size: 1em;
   line-height: 1.8;
 }
 
+/* Emoji improvements */
 .page-box h2, .content {
   word-spacing: 0.1em;
-}
-
-/* Make emoji scale better in text */
-h2::after, h2::before, .content::after, .content::before {
-  font-size: 1.1em;
-}
-
-/* Better emoji display */
-.page-box h2 {
-  letter-spacing: 0.05em;
-  word-break: break-word;
 }
